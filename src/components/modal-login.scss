@@ -1,0 +1,68 @@
+@import '../theme';
+
+// Gaya dasar untuk modal
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; // Jarak antara elemen-elemen di dalam modal
+  margin-bottom: 2rem;
+  font-family: $font-system;
+
+  .close {
+    cursor: pointer;
+    padding: 4px;
+    align-self: flex-end;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: $color-primary;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; // Jarak antara input fields
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      label {
+        font-size: 14px;
+        color: $color-text;
+      }
+
+      input {
+        padding: 10px 15px;
+        border: 1px solid $color-secondary;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: $color-highlight;
+          outline: none;
+        }
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      border: 1px solid $color-primary;
+      background-color: transparent;
+      color: $color-primary;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+// Fonts
+$font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// Colors
+$color-primary: #4acbee;
+$color-text: #333;
+$color-about-bg: #f9f9f9;
+$color-pricing-bg: #e9e9e9;
+$color-contact-bg: #d9d9d9;
+$color-footer-bg: #333;
+$color-footer-text: #fff;
+
+$color-secondary: #e9e9e9; // This is just an example, adjust as needed
+$color-secondary-lighter: lighten($color-secondary, 10%); // Lightens the secondary color by 10%
+$color-secondary-darker: darken($color-secondary, 10%); // Darkens the secondary color by 10%
+$color-highlight: #cf85fd;
+$color-white: #fff;
+
+// Padding
+$section-padding: 100px 0;
+$footer-padding: 50px 0;
+$header-padding: 10px 20px;
+
+// Box shadow
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+$breakpoint-phone: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Container widths
+$container-max-width: 1200px;
+
+$space1: 1rem;
+$space2: 2rem;
+$space3: 3rem;
+$space4: 4rem;

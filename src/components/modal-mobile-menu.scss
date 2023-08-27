@@ -1,0 +1,34 @@
+@import '../theme';
+
+// Gaya dasar untuk modal
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; // Jarak antara elemen-elemen di dalam modal
+  margin-bottom: 2rem;
+  font-family: $font-system;
+
+  .close {
+    cursor: pointer;
+    padding: 4px;
+    align-self: flex-end;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: $color-primary;
+    margin-bottom: 20px;
+  }
+
+  .menu-mobile{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+
+    & > div {
+      cursor: pointer;
+    }
+  }
+}

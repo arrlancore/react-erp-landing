@@ -1,0 +1,17 @@
+@import '../theme'; // Assuming you have a theme.scss file with your color variables
+
+.outlined-button {
+  background-color: transparent;
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  border-radius: 8px;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
