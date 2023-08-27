@@ -44,3 +44,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Penggunaan Library
+
+1. **AOS (Animate On Scroll)**:
+   Library untuk animasi elemen. Kenapa menggunakan aos karna integrasinya simple dan bisa memberikan tampilan yang lebih dinamis dan menarik serta interaktif pada halaman web.
+
+2. **node-sass**:
+   Library untuk enable sass di React. Kenapa pake sass agar developer bisa menulis CSS yang lebih modular dan terstruktur dengan fitur seperti variabel, mixin, dan nesting. Tentu bisa meningkatkan produktivitas dan memudahkan pemeliharaan kode CSS dalam skala besar.
+
+3. **react-modal**:
+   Library komponen modal yang ringan untuk React. Kita bisa menghemat banyak waktu menggunakan library ini untuk membuat modal komponen, komponen nya sudah dibikin flexible dan banyak option juga sehingga bisa kita gunakan sesuai kebutuhan. Library ini juga udah support aksesibilitas.
+
+4. **reset-css**:
+   Untuk menghilangkan perbedaan tampilan antar browser yang dapat disebabkan oleh gaya default browser. Reset juga berguna untuk mendapatkan konsistensi pada styling kita.
+
