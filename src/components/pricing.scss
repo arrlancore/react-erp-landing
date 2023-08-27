@@ -1,0 +1,75 @@
+@import "../theme";
+
+.pricing {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: $color-text;
+  }
+
+  .pricing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .pricing-card {
+      flex: 1;
+      max-width: calc(33.33% - 20px);
+      background-color: $color-white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      transition: transform 0.3s ease-in-out;
+      min-width: 200px;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 20px;
+
+        li {
+          padding: 10px 0;
+          text-align: center;
+        }
+      }
+
+      button {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pricing-cards {
+      .pricing-card {
+        max-width: calc(50% - 20px);
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .pricing-cards {
+      .pricing-card {
+        max-width: 100%;
+      }
+    }
+  }
+}

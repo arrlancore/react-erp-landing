@@ -1,0 +1,66 @@
+@import "../theme";
+@import "../app.scss";
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  z-index: 1000;
+  transition: all ease-in-out 300ms;
+
+  &.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: $color-white;
+  }
+
+  .header-container {
+    @extend .container;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    box-sizing: border-box;
+    height: 60px;
+
+    .logo {
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu {
+      display: none; 
+      gap: 20px; 
+
+      .menu-item {
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color-text;
+
+        &.active {
+          color: $color-primary;
+        }
+      }
+
+      // Tablet view
+      @media (min-width: $breakpoint-tablet) {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .hamburger-icon {
+      display: block; 
+      cursor: pointer;
+
+      // Tablet view
+      @media (min-width: $breakpoint-tablet) {
+        display: none; 
+      }
+    }
+  }
+}

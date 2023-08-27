@@ -3,191 +3,78 @@
 .app {
   font-family: $font-system;
 
-  section {
-    padding: 6px 0;
-    text-align: center;
-    min-height: 100vh; // This ensures each section has a minimum height of the screen
+  .relative {
+    position: relative;
+  }
 
-    &.about {
-      background: linear-gradient(to left, $color-highlight, #5d6ff9);
-      color: $color-white;
-      display: flex;
-      align-items: center; // Vertically centers the content
-      justify-content: center; // Horizontally centers the content
-      text-align: center; // Centers the text within the container
-      min-height: 100vh; // Takes up the full height of the viewport
+  .text-color {
+    color: $color-text;
+  }
 
-      .container-content {
-        h1 {
-          font-size: 2.5rem; // Makes the title larger
+  .text-color-primary {
+    color: $color-primary;
+  }
 
-          // Adjustments for tablet screens
-          @media (max-width: 768px) {
-            font-size: 2rem;
-          }
+  .text-color-highlight {
+    color: $color-highlight;
+  }
 
-          // Adjustments for mobile screens
-          @media (max-width: 480px) {
-            font-size: 1.5rem;
-          }
-        }
+  .font-bold {
+    font-weight: bold;
+  }
 
-        p {
-          width: 80%;
-          margin: 0 auto;
-          font-size: 1.25rem; // Makes the description larger
-          line-height: normal;
-        }
-      }
+  .space1 {
+    width: $space1;
+    height: $space1;
+  }
+  .space2 {
+    width: $space2;
+    height: $space2;
+  }
+  .space3 {
+    width: $space3;
+    height: $space3;
+  }
+  .space4 {
+    width: $space4;
+    height: $space4;
+  }
+
+  .container {
+    width: 100%;
+    max-width: $container-max-width;
+    margin: 0 auto; 
+    padding: 0 20px; 
+
+    @media (max-width: $breakpoint-phone) {
+      padding: 0 10px; 
     }
+  }
 
-    &.pricing {
-      padding: 100px 0;
-      background-color: #f9f9f9; // Adjust as needed
+  .button-primary {
+    padding: 16px 30px;
+    background-color: $color-primary; 
+    color: $color-white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 1.5rem;
 
-      h1 {
-        text-align: center;
-        margin-bottom: 50px;
-        font-weight: bold;
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 20px;
-        color: $color-text;
-      }
-
-      .pricing-cards {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap; // Makes it responsive
-
-        .pricing-card {
-          flex: 1;
-          max-width: calc(33.33% - 20px); // For 3 cards
-          background-color: $color-white;
-          border-radius: 8px;
-          padding: 20px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          margin: 10px;
-          transition: transform 0.3s ease-in-out;
-          min-width: 200px;
-
-          &:hover {
-            transform: translateY(-10px);
-          }
-
-          ul {
-            list-style-type: none;
-            padding: 0;
-            margin-bottom: 20px;
-
-            li {
-              padding: 10px 0;
-              text-align: center;
-            }
-          }
-
-          button {
-            width: 100%;
-            margin-top: 10px;
-          }
-        }
-      }
-
-      @media (max-width: 768px) {
-        .pricing-cards {
-          .pricing-card {
-            max-width: calc(50% - 20px); // 2 cards per row on tablet
-          }
-        }
-      }
-
-      @media (max-width: 480px) {
-        .pricing-cards {
-          .pricing-card {
-            max-width: 100%; // 1 card per row on mobile
-          }
-        }
-      }
+    &:hover {
+      background-color: darken(
+        $color-highlight,
+        10%
+      ); 
     }
+  }
 
-    &.contact {
-      background-color: $color-primary;
-      color: $color-white;
-      text-align: center;
-      padding: 50px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-      }
-
-      p {
-        margin-bottom: 30px;
-      }
-
-      .contact-form {
-        max-width: 500px;
-        margin: 0 auto;
-
-        .input-group {
-          margin-bottom: 20px;
-
-          label {
-            display: block;
-            margin-bottom: 10px;
-            text-align: left;
-          }
-
-          input,
-          textarea {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: $color-white;
-            transition: background-color 0.3s ease;
-
-            &:focus {
-              outline: none;
-              background-color: rgba(255, 255, 255, 0.2);
-            }
-          }
-
-          textarea {
-            resize: vertical;
-          }
-        }
-
-        .submit-button {
-          border: 2px solid $color-white;
-          background-color: transparent;
-          color: $color-white;
-          padding: 10px 20px;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-          }
-        }
-      }
-    }
-
-    // Apply container styles to the content within each section
-    .container-content {
-      @extend .container;
-      box-sizing: border-box;
-    }
+  .divider {
+    width: 200px;
+    height: 2px; 
+    background-color: $color-white;
+    border-radius: 4px; 
+    margin: 0 auto; 
   }
 
   footer {
@@ -196,218 +83,4 @@
     color: $color-white;
     text-align: center;
   }
-}
-
-.container {
-  width: 100%;
-  max-width: $container-max-width;
-  margin: 0 auto; // This centers the container
-  padding: 0 20px; // Some padding to ensure content doesn't touch the edges on smaller screens
-
-  @media (max-width: $breakpoint-phone) {
-    padding: 0 10px; // Adjust padding for phones
-  }
-}
-
-.relative {
-  position: relative;
-}
-
-.text-color {
-  color: $color-text;
-}
-
-.text-color-primary {
-  color: $color-primary;
-}
-
-.text-color-highlight {
-  color: $color-highlight;
-}
-
-.font-bold {
-  font-weight: bold;
-}
-
-.space1 {
-  width: $space1;
-  height: $space1;
-}
-.space2 {
-  width: $space2;
-  height: $space2;
-}
-.space3 {
-  width: $space3;
-  height: $space3;
-}
-.space4 {
-  width: $space4;
-  height: $space4;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  padding: 10px 0;
-  z-index: 1000;
-  transition: all ease-in-out 300ms;
-
-  &.scrolled {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: $color-white;
-  }
-
-  .header-container {
-    @extend .container;
-    display: flex;
-    justify-content: space-between; // This will push the logo to the left and the menu to the right
-    align-items: center; // Vertically centers the items
-    box-sizing: border-box;
-    height: 60px;
-
-    .logo {
-      // Add any specific styles for the logo here
-      cursor: pointer;
-      font-weight: bold;
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .menu {
-      display: none; // Hide the menu items by default (mobile-first)
-      gap: 20px; // Provides spacing between menu items
-
-      .menu-item {
-        cursor: pointer;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $color-text;
-
-        &.active {
-          color: $color-primary;
-        }
-      }
-
-      // Tablet view
-      @media (min-width: $breakpoint-tablet) {
-        display: flex; // Show the menu items on tablet and above
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    .hamburger-icon {
-      display: block; // Show the hamburger icon by default (mobile-first)
-      cursor: pointer;
-
-      // Tablet view
-      @media (min-width: $breakpoint-tablet) {
-        display: none; // Hide the hamburger icon on tablet and above
-      }
-    }
-  }
-}
-
-.hero {
-  text-align: center;
-  min-height: calc(100vh + 60px);
-  display: flex;
-  align-items: center; // Vertically center the content
-  justify-content: center; // Horizontally center the content
-  margin-top: -100px;
-  overflow: hidden;
-
-  .container-content {
-    @extend .container;
-
-    h1 {
-      font-size: 2.5rem; // Adjust as needed
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.25rem; // Adjust as needed
-      margin: 0 auto 2rem;
-      max-width: 95%;
-    }
-
-    @media (min-width: $breakpoint-tablet) {
-      max-width: 80%
-    }
-  }
-}
-
-.button-primary {
-  padding: 16px 30px;
-  background-color: $color-primary; // Or any other color you prefer
-  color: $color-white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 1.5rem;
-
-  &:hover {
-    background-color: darken(
-      $color-highlight,
-      10%
-    ); // Darkens the button color on hover
-  }
-}
-
-.hero-bg-1 {
-  background: url("/background/bg-hero-1.svg") no-repeat center center;
-  background-size: contain;
-  width: 340px;
-  height: 340px;
-  position: absolute;
-  left: -60px;
-  top: -180px;
-  @media (min-width: $breakpoint-desktop) {
-    width: 400px;
-    height: 400px;
-  }
-}
-
-.hero-bg-2 {
-  background-image: url("/background/bg-hero-2.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  width: 600px;
-  height: 600px;
-  position: absolute;
-  right: -200px;
-  bottom: -200px;
-}
-
-.hero-bg-center {
-  background: url("/background/bg-hero-center.svg") no-repeat center center;
-  background-size: contain;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-
-  // Adjustments for tablet screens
-  @media (max-width: 768px) {
-    width: 250px;
-    height: 250px;
-  }
-
-  // Adjustments for mobile screens
-  @media (max-width: 480px) {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-.divider {
-  width: 200px;
-  height: 2px; // Adjust this if you want a thicker or thinner line
-  background-color: $color-white;
-  border-radius: 4px; // This will give a slight rounding to the edges
-  margin: 0 auto; // This will center the line if placed within a container
 }

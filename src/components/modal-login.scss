@@ -1,11 +1,10 @@
 @import '../theme';
 
-// Gaya dasar untuk modal
 .modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; // Jarak antara elemen-elemen di dalam modal
+  gap: 20px; 
   margin-bottom: 2rem;
   font-family: $font-system;
 
@@ -24,7 +23,7 @@
   form {
     display: flex;
     flex-direction: column;
-    gap: 15px; // Jarak antara input fields
+    gap: 15px; 
 
     .input-group {
       display: flex;
